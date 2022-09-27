@@ -16,20 +16,19 @@ function isPrime(x) {
   }
 function solution(s){
     let answer = "";
-    let result = [];
     var a = []; // 소수 아닌 값 담아줄 빈 배열
     var b = []; // 소수인 값 담아줄 빈 배열
     s = s.split(' ') // s를 공백 단위로 나눠준다.
     
     console.log()
     for (i=0; i<=s[i]; i++){
-        // new_s = parseInt(s[i])
+        // new_s = parseInt(s[i]) 배열이기 때문에 parseInt를 하니 NaN이 나옴
         isPrime(s[i]) ? b.push(s[i]) : a.push(s[i])
     // s[i]가 소수라면  b의 배열에 넣어주고 아니라면 a의 배열에 넣어준다
     } 
     console.log(s)
-    let a_a = a.map((i)=> Number(i)) //map 메서드를 이용해서 a의 모든 요소를 숫자열로 만들어준다.
-    let b_b = b.map((i)=> Number(i)) //map 메서드를 이용해서 b의 모든 요소를 숫자열로 만들어준다.
+    let a_a = a.map((i)=> Number(i)) //배열이기 때문에 map 메서드를 이용해서 a의 모든 요소를 숫자열로 만들어준다.
+    let b_b = b.map((i)=> Number(i)) //배열이기 때문에 map 메서드를 이용해서 b의 모든 요소를 숫자열로 만들어준다.
     Math.max(...b_b) //Math.max는 최대값을 구하는 메서드로 ...b_b는 b_b의 배열 모두에서 찾겠단 뜻
     Math.min(...a_a) //Math.min은 최소값을 구하는 메서드로 뒤는 위와 같음
     
