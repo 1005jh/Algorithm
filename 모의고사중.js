@@ -10,7 +10,7 @@ function solution(arr1, arr2){
     let arr3 = [];//날마다 실제 공부한 시간을 넣어주기 위한 빈배열
     for ( i=0;i<arr2.length;i++){
         arr3.push((arr2[i] >= 29) ? 21-arr1[i] : arr2[i]-arr1[i]
-    //arr3에 체크아웃시간이 29이상이라면 체크아웃-9-체크인 아니라면 체크아웃-체크인
+    //arr3에 체크아웃시간이 29이상이라면 21-체크인 아니라면 체크아웃-체크인
         )
         answer += arr3[i] //위에서 만들어진 arr3의 모든값을 더해줌
     }
