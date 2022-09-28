@@ -22,7 +22,7 @@ function solution(s){
     
     console.log()
     for (i=0; i<=s[i]; i++){
-        // new_s = parseInt(s[i]) 배열이기 때문에 parseInt를 하니 NaN이 나옴
+        // new_s = parseInt(s[i]) 이건 못씀 배열이기 때문에 parseInt를 하니 NaN이 나옴
         isPrime(s[i]) ? b.push(s[i]) : a.push(s[i])
     // s[i]가 소수라면  b의 배열에 넣어주고 아니라면 a의 배열에 넣어준다
     } 
