@@ -27,5 +27,5 @@ function solution(arr1){
         }
     }return sum
 }
-let arr1 = [1,3,5,9,6,4,8,0];
+let arr1 = [1,3,5,9,2,4,8,0];
 console.log(solution(arr1));
