@@ -6,7 +6,7 @@
 // - 공백 포함 x
 // - 첫글짜는 짝수처리
 
-function solution(s) {
+function solution(s) {  
     let answer = "";
     let arr = s.split(' ').map(a => a.split(''))
     console.log(s.split(' ').map(a => a.split('')))

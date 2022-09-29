@@ -4,7 +4,7 @@
 // 리턴하는 함수, solution을 완성하세요. 예를들어 a=3,b=5인 경우 3+4+5 = 12를 리턴합니다.
 
 
-function solution(arr1){
+function solution(arr1){  
     let numbers = [0,1,2,3,4,5,6,7,8,9]
     
     arr1.sort()

@@ -13,7 +13,7 @@
 // -인덱스 1의 문자가 같은 문자열이 여럿 일 경우, 사전순으로 앞선 문자열이 앞쪽에 위치합니다.
 
 
-function solution(arr, n) {
+function solution(arr, n) {  
     // let answer = [];
     let a_result = arr.filter((v, i)=> (arr.indexOf(v) === i) ? false : true)
     //중복된 값이 모두 없어야 하므로 filter와 indexOf를 이용해서 중복값 추출
