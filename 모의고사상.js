@@ -27,7 +27,7 @@ function solution(s){
         isPrime(s[i]) ? b.push(s[i]) : a.push(s[i])
     // s[i]가 소수라면  b의 배열에 넣어주고 아니라면 a의 배열에 넣어준다
     } 
-    console.log(s)
+    console.log(a, b)
     let a_a = a.map((i)=> Number(i)) //map 메서드를 이용해서 a의 모든 요소를 숫자열로 만들어준다.
     let b_b = b.map((i)=> Number(i)) //map 메서드를 이용해서 b의 모든 요소를 숫자열로 만들어준다.
     Math.max(...b_b) //Math.max는 최대값을 구하는 메서드로 ...b_b는 b_b의 배열 모두에서 찾겠단 뜻
