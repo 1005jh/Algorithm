@@ -15,6 +15,7 @@
 
 function solution(arr, n) {  
     // let answer = [];
+    // let arr= ["coke", "water", "glass", "dog", "dog", "yogurt", "vitamin"];
     let a_result = arr.filter((v, i)=> (arr.indexOf(v) === i) ? false : true)
     //중복된 값이 모두 없어야 하므로 filter와 indexOf를 이용해서 중복값 추출
     let b_result = arr.filter((v, i)=> arr.indexOf(v) === i)
@@ -25,7 +26,7 @@ function solution(arr, n) {
     .filter(item => !a_result.includes(item) || !b_result.includes(item))
     //concat, filter, includes를 이용해 두 배열에서의 중복값을 제거해줌
     console.log(answer)
-    // [ 'coke', 'water', 'glass', 'yogurt', 'vitamin' ]
+    // [ 'coke', 'water', 'glass', 'yogurt', 'vitamin' ] ***SPLICE 이용해보기 (for문을 돌려야하는 불편함이 있을수도) 
     
 
 
