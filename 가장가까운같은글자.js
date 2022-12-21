@@ -20,7 +20,28 @@
 // s	result
 // "banana"	[-1, -1, -1, 2, 2, 2]
 // "foobar"	[-1, -1, 1, -1, -1, -1]
-
+//*for 반복문
+// function solution(s) {
+//   let answer = [];
+//   let str = [];
+//   for (let i = 0; i < s.length; i++) {
+//     // [...s].forEach((a) => {
+//     if (!str.includes(s[i])) {
+//       answer.push(-1);
+//       str.push(s[i]);
+//       continue;
+//     }
+//     if (str.includes(s[i])) {
+//       answer.push(str.length - str.lastIndexOf(s[i]));
+//       str.push(s[i]);
+//       continue;
+//     }
+//     // str.push(s[i]);
+//   }
+//   // )
+//   return answer;
+// }
+//*forEach 반복문
 // function solution(s) {
 //   let answer = [];
 //   let str = [];
@@ -35,26 +56,21 @@
 //   });
 //   return answer;
 // }
-function solution(s) {
-  let answer = [];
-  let str = [];
-  for (let i = 0; i < s.length; i++) {
-    // [...s].forEach((a) => {
-    if (!str.includes(s[i])) {
-      answer.push(-1);
-      str.push(s[i]);
-      continue;
-    }
-    if (str.includes(s[i])) {
-      answer.push(str.length - str.lastIndexOf(s[i]));
-      str.push(s[i]);
-      continue;
-    }
-    // str.push(s[i]);
-  }
-  // )
-  return answer;
-}
+//*forEach 두번째
+// function solution(s) {
+//   let compare = {};
+//   let answer = [];
+//   // for (let i = 0; i < s.length; i++) {
+//   [...s].forEach((item, idx) => {
+//     if (!compare[item] && compare[item] !== 0) {
+//       answer.push(-1);
+//     } else {
+//       answer.push(idx - compare[item]);
+//     }
+//     compare[item] = idx;
+//   });
+//   return answer;
+// }
 const s = "banana";
 console.time("solution");
 console.log(solution(s));
