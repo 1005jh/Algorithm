@@ -30,13 +30,13 @@
 function solution(cacheSize, cities) {
   var answer = 0;
   let arr = [];
-  cities = cities.map((a) => a.toLowerCase());
+  // cities = cities.map((a)=> a.toLowerCase())
   if (cacheSize == 0) return cities.length * 5;
   for (let i = 0; i < cities.length; i++) {
-    // console.log(arr.findIndex((a)=>a==cities[i]))
-    if (arr.findIndex((a) => a == cities[i]) != -1) {
+    const tlc = cities[i].toLowerCase();
+    if (arr.findIndex((a) => a == tlc) != -1) {
       arr.splice(
-        arr.findIndex((a) => a == cities[i]),
+        arr.findIndex((a) => a == tlc),
         1
       );
       // console.log(arr,i)
@@ -45,12 +45,47 @@ function solution(cacheSize, cities) {
       answer += 5;
     }
     if (arr.length === cacheSize) arr.shift();
-    // console.log(answer)
-    arr.push(cities[i]);
+    arr.push(tlc);
   }
   return answer;
 }
+//*세준풀이
+// function solution(cacheSize, cities) {
+//   let answer = 0;
+//   if (!cacheSize) return cities.length * 5;
+//   const set = new Set();
+//   for (let i = 0; i < cities.length; i++) {
+//     const str = cities[i].toLowerCase();
+//     if (set.has(str)) {
+//       answer++;
+//       set.delete(str);
+//     } else answer += 5;
+//     if (cacheSize === set.size) set.delete([...set][0]);
+//     set.add(str);
+//   }
+//   return answer;
+// }
+//*용교풀이
+// function solution(cacheSize, cities) {
+//   let answer = 0;
+//   let cacheArr = [];
 
+//   cities.map((i) => {
+//     let e = i.toLowerCase();
+//     let index = cacheArr.indexOf(e);
+
+//     if (index !== -1) {
+//       cacheArr.splice(index, 1);
+//       answer++;
+//     } else {
+//       answer += 5;
+//     }
+
+//     cacheArr.push(e);
+//     if (cacheArr.length > cacheSize) cacheArr.shift();
+//   });
+//   return answer;
+// }
 const cities = [
   "Jeju",
   "Pangyo",
@@ -64,4 +99,6 @@ const cities = [
   "LA",
 ];
 const cacheSize = 3;
+console.time("solution");
 console.log(solution(cacheSize, cities));
+console.timeEnd("solution");
