@@ -37,6 +37,7 @@ function solution(k, tangerine) {
   //     obj[a] = ++obj[a] || 1
   // })
   // console.log(obj)
+  console.log("22222222222222222");
   const values = Object.values(obj).sort((a, b) => b - a);
   // console.log(values)
   let add = 0;
@@ -47,3 +48,7 @@ function solution(k, tangerine) {
   }
   return answer;
 }
+
+const tangerine = [1, 3, 2, 5, 4, 5, 2, 3];
+const k = 6;
+console.log("111", solution(k, tangerine));

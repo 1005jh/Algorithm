@@ -49,6 +49,7 @@
 //     if (!str.includes(a)) {
 //       answer.push(-1);
 //     }
+//     // console.log(answer);
 //     if (str.includes(a)) {
 //       answer.push(str.length - str.lastIndexOf(a));
 //     }

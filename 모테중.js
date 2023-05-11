@@ -9,21 +9,19 @@
 function solution(s) {
   let answer = "";
   let arr = s.split(" ").map((a) => a.split(""));
-  console.log(s.split(" ").map((a) => a.split("")));
-  // [
-  //     [ 'h', 'a', 'n', 'g' ],
-  //     [ 'h', 'a', 'e' ],
-  //     [ 'n', 'i', 'n', 'e', 't', 'y' ],
-  //     [ 'n', 'i', 'n', 'e' ]
-  //   ]
+  console.log(
+    "0",
+    s.split(" ").map((a) => a.split(""))
+  );
   let arr_1 = arr[0];
   let arr_2 = arr[1];
   let arr_3 = arr[2];
   let arr_4 = arr[3];
   console.log(arr_1, arr_2, arr_3, arr_4);
   let arr_5 = [...arr_1, ...arr_2, ...arr_3, ...arr_4];
-  console.log(arr_5);
+  console.log("1", arr_5);
   console.log(
+    "2",
     arr_5.map((a, i) => (i % 2 == 0 ? a.toUpperCase() : a.toLowerCase()))
   );
   let arr_6 = arr_5.map((a, i) =>
@@ -40,25 +38,20 @@ function solution(s) {
     arr_1.length + arr_2.length + arr_3.length + arr_4.length
   );
 
-  console.log(result1, result2, result3, result4);
+  console.log("3", result1, result2, result3, result4);
   result = [result1, result2, result3, result4];
-  // result1.join('')
-  // result2.join('')
-  // result3.join('')
-  // result4.join('')
-  // result = [
-  //     ...result1,
-  //     ...result2,
-  //     ...result3,
-  //     ...result4
-  // ]
-  console.log(result.map((a) => a.join("")));
+
+  console.log(
+    "4",
+    result.map((a) => a.join(""))
+  );
   let new_result = [result.map((a) => a.join(""))];
-  console.log(new_result.map((a) => a.join(" ")));
-  // console.log(result.join(' ').map(a => a.join('')))
-  // console.log(result.join('').map((a) => a.join(' ')))
+  console.log(
+    "5",
+    new_result.map((a) => a.join(" "))
+  );
   return '"' + new_result.map((a) => a.join(" ")) + '"';
 }
 
-let s = "hang hae ninety nine";
+let s = "www wwww www www";
 console.log(solution(s));

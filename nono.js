@@ -35,7 +35,6 @@ function solution(scores) {
   } else {
     difficult = 1;
   }
-  console.log(totalAvgScore);
   // 어려운 문제 번호 끝
 
   // 객체로 변환
@@ -46,7 +45,6 @@ function solution(scores) {
       avgScore: (item[0] + item[1]) / 2,
     });
   });
-  console.log(objArr);
   // 객체로 변환
   objArr.sort((a, b) => {
     if (a.avgScore > b.avgScore) {
