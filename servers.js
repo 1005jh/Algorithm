@@ -10,11 +10,11 @@ function solution(players, m, k) {
     const required = Math.floor(players[i] / m);
 
     if (required > servers) {
-      const add = required - servers;
-      total += add;
-      servers += add;
+      const expansion = required - servers;
+      total += expansion;
+      servers += expansion;
 
-      expire[i + k] += add;
+      expire[i + k] += expansion;
     }
   }
 
