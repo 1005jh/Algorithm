@@ -81,7 +81,7 @@ function solution(cap, n, deliveries, pickups) {
   return answer;
 }
 
-// 수학적풀이
+// 수학적풀이 훨씬 빠름..
 function solution(cap, n, deliveries, pickups) {
   let answer = 0;
 
