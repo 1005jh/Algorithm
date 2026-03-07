@@ -55,3 +55,42 @@ for (let i = 1; i <= n*n; i++) {
   x += dx[dir];
   y += dy[dir];
 }
+
+방향배열 사용 직관적 풀이
+function solution(n) {
+  const triangle = Array.from({ length: n }, (_, i) => Array(i + 1).fill(0));
+
+  const dx = [1, 0, -1]; // 아래, 오른쪽, 왼쪽위
+  const dy = [0, 1, -1];
+
+  let x = 0;
+  let y = 0;
+  let dir = 0;
+  let num = 1;
+
+  const max = (n * (n + 1)) / 2;
+
+  for (let i = 0; i < max; i++) {
+    triangle[x][y] = num++;
+
+    let nx = x + dx[dir];
+    let ny = y + dy[dir];
+
+    if (
+      nx >= n ||
+      ny > nx ||
+      nx < 0 ||
+      ny < 0 ||
+      triangle[nx][ny] !== 0
+    ) {
+      dir = (dir + 1) % 3;
+      nx = x + dx[dir];
+      ny = y + dy[dir];
+    }
+
+    x = nx;
+    y = ny;
+  }
+
+  return triangle.flat();
+}
