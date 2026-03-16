@@ -36,6 +36,7 @@ function solution(users, emoticons) {
       ) {
         max_sub = subscriber;
         max_sale = sales;
+        m;
       }
 
       return;
