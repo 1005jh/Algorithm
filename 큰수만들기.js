@@ -40,7 +40,7 @@ function solution(number, k) {
 }
 
 
-이거도 된다고 함
+이거도 됨
 function solution(number, k) {
     var answer = '';
     let arr= []
